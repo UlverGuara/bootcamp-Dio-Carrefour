@@ -1,0 +1,44 @@
+-Estrutura-
+
+Sets são estruturas que armazenam apenas valores únicos.
+
+Set(8) {1, 2, 3, 4, 5, ...}
+	[[Entries]]
+	0: 1
+	1: 2
+	2: 3
+	3: 4
+	4: 5
+	5: 6
+	6: 7
+	7: 8
+	size: (...)
+	_pronto_: Set
+
+*O array pode ter valores repetidos já p set não.*
+
+-Métodos-
+Adicionar, consultar e deletar
+
+const mySet = new Set();
+
+(Adicionando os números 1 e 5.)
+mySet.add(1);
+mySet.add(5);
+
+(Consultando o número 1 e retornando a informação de verdadeiro)
+mySet.has(1);
+// true
+
+(Consultando o número 3 e retornando a informação de falso)
+mySet.has(3);
+// false
+
+(Deletando o número 5)
+mySet.delete(5);
+
+-Set vs Array-
+
+Possui valores únicos;
+Em vez da propriedade lenght, consulta-se o número de registros pela propriedade size;
+Não possui os métodos map, filter, reduce etc.

@@ -1,0 +1,31 @@
+O map tem as entradas que são no formato chave e valor.
+Pode ser iterado pelo loop for of.
+
+-Coleções Chaveadas-
+Adicionar, ler e deletar
+
+const myMap = new Map()
+
+(Aqui é a dicionado a "apple" na lista "fruit")
+myMap.set('apple', 'fruit');
+// Map(1) {"apple" => "fruit"}
+
+(Consulta de "apple" que identifica como "fruit")
+myMap.get("apple");
+// "fruit"
+
+(Deletando a "aaple" com sucesso)
+myMap.delete("apple");
+// true
+
+(Procurando por "apple" sem sucesso pois foi deletada)
+myMap.get("apple");
+// undefined
+
+-Maps vs Objetos-
+
+Maps podem ter chaves de qualquer tipo;
+Maps possuem a propria length;
+Maps são mais fáceis de iterar;
+Utilizado quando o valor das chaves é desconhecido;
+Os valores tem o mesmo tipo.
