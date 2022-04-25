@@ -1,0 +1,99 @@
+-Throw-
+
+function verificaPalindrome(string) {
+	if (!string) return "String inválida";
+	
+	return string === string.split('').reverse().join('');
+}
+
+function verificaPalindrome('cat');
+"String inválida"
+
+*Cat não é um Palindrome*
+
+function verificaPalindrome(string) {
+	if (!string) throw "String inválida";
+	
+	return string === string.split('').reverse().join('');
+}
+
+function verificaPalindrome('');
+Uncaught String Inválida
+
+*Aparece a mensagem de erro por falta de String*
+
+*No exemplo o throw vai verificar se a string que você vai mandar é um palíndromo (uma palavra que tem o mesmo sentido se for escrita de trás para frente)
+
+Com o throw você vai ter uma mensagem no seu console dizendo que ocorreu um erro.*
+
+-Try/Catch- 
+
+function verificaPalindrome(string) {
+	if (!string) throw "String inválida";
+	
+	return string === string.split('').reverse().join('');
+}
+
+function tryCatchExemplo(string) {
+	try{
+	verificaPalindrome(string)
+	}
+	catch(e) {
+	console.log(e)
+	}
+}
+	tryCatchExemplo('');
+	*Vai aparecer a mensagem: String inválida*
+
+*Basicamente vai verificar dentro do bloco try se esse pedaço de código tiver algum tipo de erro ele vai ser verificado na função catch e você pode manipular dentro dele.
+
+O catch permite que possamos manipular o erro de uma maneira mais personalizada.*
+
+
+-Finally-
+
+function verificaPalindrome(string) {
+	if (!string) throw "String inválida";
+	
+	return string === string.split('').reverse().join('');
+}
+
+function tryCatchExemplo(string) {
+	try{
+	return verificaPalindrome(string)
+	}
+	catch(e) {
+	throw e;
+	}
+	finally {
+	console.log('A string enviada foi: ' + string);
+	}
+}
+	tryCatchExemplo('');
+
+	*Vai aparecer a mensage: "A string enviada foi: " Uncaught String inválida (não existe string gerando erro)*
+
+
+*O finally é uma instrução que pode ser usada independente se ocorrer o erro, pode ter sido executado com sucesso que o finally também vai aparecer*
+
+*Validação sem erros.*
+function verificaPalindrome(string) {
+	if (!string) throw "String inválida";
+	
+	return string === string.split('').reverse().join('');
+}
+
+function tryCatchExemplo(string) {
+	try{
+	return verificaPalindrome(string)
+	}
+	catch(e) {
+	throw e;
+	}
+	finally {
+	console.log('A string enviada foi: ' + string);
+	}
+}
+	tryCatchExemplo('ala');
+
+	*Vai aparecer a mensage: "A string enviada foi: ala" true (correto)*

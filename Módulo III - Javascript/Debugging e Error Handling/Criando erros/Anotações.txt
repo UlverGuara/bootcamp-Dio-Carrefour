@@ -1,0 +1,14 @@
+-Criando erros-
+
+new Error(message, fileName, lineNumber)
+
+const MeuErro =  new Error('Mensagem Inválida');
+
+throw MeuErro;
+
+O erro aceita os parâmetros message, fileName e lineNumber, mas depende do browsers.
+
+Para criar esse erro você o faz como uma constante e da o nome para fazer uma instância como new Error e criar uma mensagem com um throw, em seguida ele mostra em que linda ele esta.
+
+O erro também pode ter um nome com o .name, primeiro vem o nome dele, depois a mensagem e em seguida a linha dele.
+

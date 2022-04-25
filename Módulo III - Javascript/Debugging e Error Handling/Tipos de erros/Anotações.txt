@@ -1,0 +1,11 @@
+-ECMAScript Error-
+É um erro que acontece em tempo de execução, alguma variável, ponto e virgula etc.
+É composto por:
+-Mensagem
+-Nome
+-Linha
+-Call Stack
+
+-DOMException-
+Esta relacionando quando estamos usando nosso código JavaScript a uma pagina web.
+Erros referentes a sua árvore de estrutura na sua página web.
